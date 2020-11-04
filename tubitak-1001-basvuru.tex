@@ -1,0 +1,151 @@
+% last update: 2020-11-03 by Can Alkan
+\documentclass[a4paper,9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+%\usepackage{arial}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{graphicx}
+%\usepackage[a4paper,centering,margin=0.75in,bottom=1in,top=0.59in]{geometry}
+\usepackage[a4paper,centering,left=0.75in,right=0.75in,bottom=1in,top=0.59in]{geometry}
+
+%\usepackage[a4paperpaperwidth=8.27in,paperheight=11.69in,margin=0.75in,bottom=0.6in,top=1in]{geometry}
+%\usepackage[a4,frame,center,noinfo]{crop}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabulary}
+\usepackage{lipsum}
+\usepackage{pdflscape}
+\usepackage{color, colortbl}
+\usepackage{natbib}
+\usepackage{csquotes}
+
+\definecolor{mygray}{gray}{0.7}
+\setlength{\headheight}{0.65in}
+%\setlength{\footheight}{0.65in}
+\setlength\textwidth{6.51in}\setlength\footskip{1in}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\renewcommand{\figurename}{\bf Şekil}
+\renewcommand{\tablename}{\bf Tablo}
+\renewcommand{\contentsname}{İçindekiler}
+\renewcommand{\refname}{}
+\renewcommand{\listfigurename}{Şekiller}
+\renewcommand{\listtablename}{Tablolar}
+
+
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{0.5pt}
+
+\fancypagestyle{mylandscape}{
+\fancyhf{} %Clears the header/footer
+%\fancyhead{
+%        \rotatebox{90}{\includegraphics[height=0.41in]{figs/tubitak_logo.jpg}}
+%        }
+
+%\fancyhead{
+%\makebox[\textwidth][c]{% center
+%\llap{
+%\raisebox{8.87in}{% Raise vertically
+%        \rotatebox{90}{\includegraphics[height=0.41in]{figs/tubitak_logo.jpg}}
+%        }
+%        }
+%        }
+%        }
+
+
+%\fancyfoot[l]{{\footnotesize 1001BF-01  Güncelleme Tarihi: 07/04/2020}}\\
+\fancyfoot{% Footer
+\makebox[\textwidth][r]{% Right
+  \rlap{\hspace{.75cm}% Push out of margin by \footskip
+    \smash{% Remove vertical height
+    \raisebox{5.87in}{% Raise vertically
+        \rotatebox{90}{ {\hspace*{-4.5in}\footnotesize 1001BF-01  Güncelleme Tarihi: 07/04/2020}}
+        }
+      \raisebox{4.87in}{% Raise vertically
+        \rotatebox{90}{ %{\footnotesize 1001BF-01  Güncelleme Tarihi: 07/04/2020\\}
+        \thepage}}}}}}% Rotate counter-clockwise
+\renewcommand{\headrulewidth}{0pt}% No header rule
+\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+
+\pagestyle{fancy}
+
+\fancyhead[c]{\includegraphics[height=0.41in]{figs/tubitak_logo.jpg}}
+\fancyfoot[l]{{\footnotesize 1001BF-01  Güncelleme Tarihi: 07/04/2020}\\
+%\begin{center}
+%    \thepage
+%\end{center}
+}
+
+\begin{document}
+\begin{center}
+\colorbox{mygray}{\begin{minipage}{\textwidth}
+\begin{center}
+\mbox{\textbf{\small 1001 - BİLİMSEL VE TEKNOLOJİK ARAŞTIRMA PROJELERİNİ DESTEKLEME PROGRAMI}}\\
+       \textbf{\small PROJE BAŞVURU FORMU}
+ \end{center}
+\end{minipage}}
+ \end{center}
+  \vspace*{0.1in}
+\begin{tabular}{|p{0.95\textwidth}|}
+\hline
+     \textbf{Proje Başlığı:} \\ \hline
+     \textbf{Proje Yürütücüsü:} \\ \hline
+     \textbf{Projenin Yürütüleceği Kurum/Kuruluş:} \\
+     \hline
+\end{tabular}
+
+\null \null
+
+\noindent\textbf{ÖZET}
+
+
+% Türkçe ve İngilizce özetlerin projenin (a) özgün değeri, (b) yöntemi, (c) yönetimi ve (d) yaygın etkisinin ana hatlarını kapsaması beklenir. Her bir özet 600 kelime ile sınırlandırılmalıdır. Bu bölümün en son yazılması önerilir.
+
+\input{ozet.tex}
+
+\clearpage
+\noindent{\textbf{1. ÖZGÜN DEĞER}}
+\input{ozgun}
+
+\clearpage
+\noindent{\textbf{2. YÖNTEM}}
+\input{yontem}
+
+\newpage
+%\noindent{\textbf{3. PROJE YÖNETİMİ}}
+\input{yonetim}
+
+
+\clearpage
+\noindent{\textbf{4. YAYGIN ETKİ}}
+\input{yayginetki}
+
+\clearpage
+\noindent{\textbf{BELİRTMEK İSTEDİĞİNİZ DİĞER KONULAR}}\\
+%Sadece proje önerisinin değerlendirilmesine katkı sağlayabilecek bilgi veya veri (grafik, tablo, vb.) eklenebilir.
+
+\begin{center}
+\fbox{ %
+\parbox{\textwidth}
+{
+    homer~\citep{Alkan2009} simpson~\citep{1000GP}
+} %
+}
+\end{center}
+
+
+\vspace*{0.1in}
+\noindent{\textbf{BAŞVURU FORMU EKLERİ}}\\
+
+\noindent{\textbf{EK-1: KAYNAKLAR}}\\
+\noindent{\textbf{EK-2: BÜTÇE VE GEREKÇESİ}}\\
+\noindent{\textbf{EK-3: PROJE EKİBİNİN DİĞER PROJELERİ VE GÜNCEL YAYINLARI (Proje Başvuru Sistemi (PBS)'ne girilen bilgiler doğrultusunda Sistem tarafından otomatik olarak oluşturulmaktadır.)}}
+
+\clearpage
+\input{ek1kaynaklar}
+\clearpage
+\input{ek2butce}
+\end{document}
